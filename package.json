@@ -1,0 +1,23 @@
+{
+  "name": "statistics",
+  "version": "0.0.1",
+  "description": "A collection of statistical functions for use with node.js",
+  "main": "\"\"",
+  "scripts": {
+    "test": "\"\""
+  },
+  "keywords": [
+    "statistics",
+    "mean",
+    "mode",
+    "variance",
+    "standard",
+    "deviation",
+    "standard",
+    "error",
+    "z-test",
+    "sample"
+  ],
+  "author": "Håkon Antonsen",
+  "license": "MIT"
+}
