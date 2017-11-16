@@ -38,14 +38,14 @@ function mode(sample) {
  * @return {number} 
  */
 function median(sample, sorted = false) {
-    const orderedSample = sorted ? sample : sample.sort();
+    const orderedSample = sorted ? sample : sample.sort((a, b) => a - b);
     const medianPosition = orderedSample.length / 2;
 
-    if(medianPosition % 1 > 0) {
-        const lowerPosition = (medianPosition - (medianPosition % 1)) - 1;
-        const upperPosition = (medianPosition - (medianPosition % 1));
+    if(medianPosition % 1 === 0) {
+        const lowerPosition = medianPosition - 1;
+        const upperPosition = medianPosition;
         return mean([orderedSample[lowerPosition], orderedSample[upperPosition]]);
-    } else return orderedSample[medianPosition];
+    } else return orderedSample[Math.floor(medianPosition) - 1];
 }
 
 module.exports = {
