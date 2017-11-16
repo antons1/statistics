@@ -36,11 +36,11 @@ Current features:
 
 - Calculate central tendencies like mean, mode and median
 - Variance
+- Standard deviation
+- Standard error
 
 Planned features:
 
-- Standard deviation
-- Standard error
 - Significance testing (z-test, t-test etc.)
 
 4 Why does this exist?

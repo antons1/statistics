@@ -16,12 +16,16 @@ function variance(data, useN = false) {
     return util.numberToPrecision(variance, 14);
 }
 
-function standardDeviation() {
-
+function standardDeviation(data, useN = false) {
+    const s2 = variance(data, useN);
+    return Math.sqrt(s2);
 }
 
-function standardError() {
+function standardError(data, useN = false) {
+    const stddev = standardDeviation(data, useN);
+    const n = data.length;
 
+    return stddev / Math.sqrt(n);
 }
 
 module.exports = {

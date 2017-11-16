@@ -19,4 +19,29 @@ describe("Spread calculation", () => {
             spread.variance(localArray).should.equal(83893.042105263)
         });
     });
-})
+
+    describe("Should calculate correct standard deviation", () => {
+        it("for population", () => {
+            const localArray = testArray.slice(0);
+            spread.standardDeviation(localArray, true).should.equal(282.309032799165);
+        });
+
+        it("for sample", () => {
+            const localArray = testArray.slice(0);
+            spread.standardDeviation(localArray).should.equal(289.6429562500407);
+        });
+    });
+
+    describe("Should calculate correct standard error", () => {
+        it("for population", () => {
+            const localArray = testArray.slice(0);
+            spread.standardError(localArray, true).should.equal(63.12621880011506);
+        });
+        
+        it("for sample", () => {
+            const localArray = testArray.slice(0);
+            spread.standardError(localArray).should.equal(64.76613393790885);
+
+        });
+    });
+});
