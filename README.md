@@ -35,10 +35,10 @@ See ~~[docs]()~~ (That do not exist yet) for functions
 Current features:
 
 - Calculate central tendencies like mean, mode and median
+- Variance
 
 Planned features:
 
-- Variance
 - Standard deviation
 - Standard error
 - Significance testing (z-test, t-test etc.)

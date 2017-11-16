@@ -1,3 +1,6 @@
+const central = require('./central.js');
+const util = require('../util.js');
+
 /**
  * Calculates variance of given data
  * @param {Array.<number>} data Array of numbers from sample or population 
@@ -5,7 +8,12 @@
  * @return {number} Variance of given data
  */
 function variance(data, useN = false) {
-    return 0;
+    const n = useN ? data.length : data.length - 1;
+    const mean = central.mean(data);
+
+    const squaredDifferenceSum = data.reduce((acc, i) => acc += Math.pow(Math.abs(i - mean), 2), 0)
+    const variance = (1 / n) * squaredDifferenceSum;
+    return util.numberToPrecision(variance, 14);
 }
 
 function standardDeviation() {
